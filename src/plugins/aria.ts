@@ -70,7 +70,7 @@ export const AriaPlugin: AriaPluginFunction = (
           : 'off'
         : options.live;
 
-    safelyMountNodeAttr(root, 'role', 'tablist');
+    safelyMountNodeAttr(root, 'role', 'region');
     safelyMountNodeAttr(root, 'aria-live', ariaLive);
     safelyMountNodeAttr(root, 'aria-orientation', ariaOrientation);
     safelyMountNodeAttr(root, 'aria-roledescription', ariaRoleDesc);
@@ -258,7 +258,7 @@ export const AriaPlugin: AriaPluginFunction = (
       const visible = emblaApi.slidesInView().includes(index);
       const localizedRoleDesc = intl.format('slide.roledescription');
 
-      safelyMountNodeAttr(node, 'role', 'tabpanel');
+      safelyMountNodeAttr(node, 'role', 'group');
       safelyMountNodeAttr(node, 'aria-label', localizedLabel);
       safelyMountNodeAttr(node, 'aria-roledescription', localizedRoleDesc);
       safelyMountNodeAttr(node, 'aria-hidden', visible ? 'false' : 'true');
